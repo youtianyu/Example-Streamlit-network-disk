@@ -24,19 +24,8 @@ st.set_page_config(
 
 # 初始化secrets配置
 if 'secrets' not in st.session_state:
-    st.session_state.secrets = {
-        "login": {
-            "enroll_enable": True,
-            "enroll_max_num": 10
-        },
-        "normal": {
-            "limit": 100  # 普通用户限制100MiB
-        },
-        "administrator": {
-            "name": "admin",
-            "password": "admin123"
-        }
-    }
+    st.session_state.secrets = st.secrets
+    
 
 # 初始化session_state
 if 'page' not in st.session_state:
